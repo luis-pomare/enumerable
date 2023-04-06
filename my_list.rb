@@ -8,7 +8,7 @@ class MyList
     @list = arr
   end
 
-  def each(&)
-    @list.each(&)
+  def each(&prc)
+    @list.each(&prc)
   end
 end
