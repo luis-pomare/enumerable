@@ -5,12 +5,9 @@ class MyList
     @list = arr
   end
   def each
-    @list.each {|element| puts(element)}
+    @list.each {|element| yield element}
   end
 end
 
 list = MyList.new(1, 2, 3, 4)
-list.all?
-list.any?
-list.filter?
-list.each
+list.all? 

@@ -1,6 +1,8 @@
 module MyEnumerable
   def all?
-    puts("All_method")
+    @check = false
+    each {|element| if element == 2 }
+    @check
   end
   def any?
     puts("Any_method")
