@@ -1,13 +1,15 @@
 require_relative 'MyEnumerable'
+
 class MyList
   include MyEnumerable
+
   def initialize(*arr)
     @list = arr
   end
+
   def each
-    @list.each {|element| yield element}
+    result = true
+    print @list.each{|e|result = result && e > 5}
+    return result
   end
 end
-
-list = MyList.new(1, 2, 3, 4)
-list.all? 
